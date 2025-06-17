@@ -1,5 +1,4 @@
-//DOM Elements
-
+// DOM Elements
 const shapeElem = document.querySelector('.shape');
 const leftElem = document.getElementById('left');
 const topElem = document.getElementById('top');
@@ -8,50 +7,29 @@ const bottomElem = document.getElementById('bottom');
 const rangerElem = document.getElementById('ranger');
 const codeElem = document.querySelector('.code');
 
+function leftSlider(event) {
+    if (event.target.id !== 'left') return;
 
-function leftSlider(event){
-    //go furthur only if id is left
-    if (event.target.id !== `left`) return;
-
-    //when #left is checked
-    if(event.target.checked){
+    if (event.target.checked) {
         ranger(leftElem);
     }
 }
 
-function ranger(){
+function ranger() {
     let rangerValue = rangerElem.value;
-    leftElem.style.top = `${rangerValue}%`;
+    elem.style.top = `${rangerValue}%`;
 }
 
+document.addEventListener('change', leftSlider);
 
+function topSlider(event) {
+    if (event.target.id === 'top' && event.target.checked) {
+        ranger(topElem);
+    }
+}
 
-
-// //Change postion of slider
-
-// function leftSlider(event) {
-//     //go furthur only if id is left
-//     if (event.target.id !== `left`) return;
-
-//     //when #left is checked
-//     if(event.target.checked){
-//         console.log(rangerElem.value);
-//         // rangerHandle();
-//     }
-// }
-
-// function rangerHandle(){
-//     leftElem.style.top = rangerElem.value;
-// }
-
-// function sliderHandler(event) {
-//     leftSlider(event);
-//     // topSlider(event);
-//     // rightSlider(event);
-//     // bottomSlider(event);
-// }
-
-// //Event
-
-document.addEventListener('change', ranger);
-
+function rightSlider(event) {
+    if (event.target.id === 'right' && event.target.checked) {
+        ranger(rightElem);
+    }
+}
