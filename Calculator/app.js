@@ -1,6 +1,6 @@
 class Calculator {
     constructor(calcElement, resultElement){
-        this.calcElement = ;
+        this.calcElement = calcElement;
         this.resultElement = resultElement;
         this.clear();
     }
