@@ -4,7 +4,7 @@ function getAngle() {
     const secondHand = document.querySelector('.second');
 
     const today = new Date();
-    let hours = today.();
+    let hours = today.getHours();
     let minutes = today.getMinutes();
     let seconds = today.getSeconds();
 
