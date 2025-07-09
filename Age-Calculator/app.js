@@ -16,7 +16,7 @@ function getAge(){
 
 
     let diff = today - dob;
-    let age = diff / (1000 * 60 * 60 * 24 * 365); //21.375 
+    let age = diff / (10000 * 60 * 60 * 24 * 365); //21.375 
 
     calcAge(age);
 }
