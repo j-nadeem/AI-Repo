@@ -10,7 +10,7 @@ function getAge() {
     const today = new Date();
 
     let diff = dob - today;
-    let age = diff / (1000 * 60 * 60 * 24 * 365);
+    let age = diff / (100 * 60 * 60 * 24 * 365);
 
     calcAge(age);
 }
